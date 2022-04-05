@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, FragmentRating())
+            .replace(R.id.main_container, FragmentList())
             .addToBackStack(null)
             .commit()
 
