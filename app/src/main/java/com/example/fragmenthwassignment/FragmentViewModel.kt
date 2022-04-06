@@ -8,23 +8,15 @@ import kotlinx.android.synthetic.main.fragment_list.*
 
 class FragmentViewModel: ViewModel() {
 
-    var dRating = 0.0F
-
-    var dogRating = ""
-    var catRating = ""
-    var bearRating = ""
-    var rabbitRating = ""
+    var dogRating = 0.0F
+    var catRating = 0.0F
+    var bearRating = 0.0F
+    var rabbitRating = 0.0F
     var selectedAnimal = ""
 
-    fun setRatingTest(ratingPassed: Float?) {
-        if (selectedAnimal == "Dog") {
-            if (ratingPassed != null) {
-                dRating = ratingPassed
-            }
-        }
-    }
 
-    fun setRating(ratingPassed: String) {
+
+    fun setRating(ratingPassed: Float) {
         if (selectedAnimal == "Dog") {
             dogRating = ratingPassed
         }
@@ -39,23 +31,19 @@ class FragmentViewModel: ViewModel() {
         }
     }
 
-    fun getDogRate(): String {
+    fun getDogRate(): Float {
         return dogRating
     }
 
-    fun getDogRateTest(): Float {
-        return dRating
-    }
-
-    fun getBearRate(): String {
+    fun getBearRate(): Float {
         return bearRating
     }
 
-    fun getCatRate(): String {
+    fun getCatRate(): Float {
         return catRating
     }
 
-    fun getRabbitRate(): String {
+    fun getRabbitRate(): Float {
         return rabbitRating
     }
 
@@ -66,6 +54,7 @@ class FragmentViewModel: ViewModel() {
     fun getAnimal(): String {
         return selectedAnimal
     }
+
 
 
 }
